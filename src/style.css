@@ -17,19 +17,21 @@ main {
   grid-gap: 2rem;
 }
 
-h1 {
+.header__heading {
   font-size: 7rem;
   font-family: 'Creepster', cursive;
 }
 
-input {
+.header__search {
   font-size: 1.5rem;
 }
 
-.image--left {
-  width: 500px;
+.img--left {
+  width: 600px;
+  padding-left: 1rem;
 }
 
-.image--right {
+.img--right {
   width: 600px;
+  padding-right: 1rem;
 }
