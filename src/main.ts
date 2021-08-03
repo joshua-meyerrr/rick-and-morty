@@ -2,9 +2,13 @@ import './style.css';
 
 const app = document.querySelector<HTMLDivElement>('#app');
 
+const mainElement = document.createElement('main');
+
+const title = document.createElement('h1');
+title.innerHTML = 'Rick and Morty';
+
+mainElement.append(title);
+
 if (app !== null) {
-  app.innerHTML = `
-  <h1>Hello Vite!</h1>
-  <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-`;
+  app.append(mainElement);
 }
