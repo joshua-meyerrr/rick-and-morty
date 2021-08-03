@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -5,4 +7,29 @@
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+main {
+  display: grid;
+  grid-auto-flow: row;
+  place-items: center;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-gap: 2rem;
+}
+
+h1 {
+  font-size: 7rem;
+  font-family: 'Creepster', cursive;
+}
+
+input {
+  font-size: 1.5rem;
+}
+
+.image--left {
+  width: 500px;
+}
+
+.image--right {
+  width: 600px;
 }
