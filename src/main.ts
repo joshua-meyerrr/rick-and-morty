@@ -7,7 +7,10 @@ const mainElement = document.createElement('main');
 const title = document.createElement('h1');
 title.innerHTML = 'Rick and Morty';
 
-mainElement.append(title);
+const input = document.createElement('input');
+input.placeholder = 'Search for a character...';
+
+mainElement.append(title, input);
 
 if (app !== null) {
   app.append(mainElement);
