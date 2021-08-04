@@ -1,10 +1,11 @@
 import { createCharacterCard } from './components/characters/character';
 import './style.css';
+import { Character } from './types';
 import { createElement } from './utils/createElement';
 
 const app = document.querySelector<HTMLDivElement>('#app');
 
-const character = {
+const character: Character = {
   name: 'Rick Sanchez',
   thumbnail: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
   status: 'Alive',

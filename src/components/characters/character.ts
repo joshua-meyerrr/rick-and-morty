@@ -1,5 +1,6 @@
 import { createElement } from '../../utils/createElement';
 import './character.css';
+import type { Character } from '../../types';
 
 export function createCharacterCard({
   thumbnail,
@@ -8,7 +9,7 @@ export function createCharacterCard({
   species,
   location,
   origin,
-}): HTMLElement {
+}: Character): HTMLElement {
   return createElement('article', {
     className: 'card',
     childElements: [
