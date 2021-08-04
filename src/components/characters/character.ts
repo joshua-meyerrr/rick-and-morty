@@ -1,5 +1,5 @@
 import { createElement } from '../../utils/createElement';
-import './character.css';
+import styles from './character.module.css';
 import type { Character } from '../../types';
 
 export function createCharacterCard({
@@ -11,31 +11,31 @@ export function createCharacterCard({
   origin,
 }: Character): HTMLElement {
   return createElement('article', {
-    className: 'card',
+    className: styles.card,
     childElements: [
       createElement('img', {
         src: thumbnail,
-        className: 'card__img',
+        className: styles.image,
       }),
       createElement('div', {
-        className: 'card__content',
+        className: styles.content,
         childElements: [
           createElement('section', {
-            className: 'card__character',
+            className: styles.character,
             childElements: [
               createElement('h2', {
                 innerText: name,
-                className: 'character__name',
+                className: styles.character__name,
               }),
               createElement('div', {
-                className: 'character__status',
+                className: styles.character__status,
                 childElements: [
                   createElement('span', {
-                    className: 'status__icon',
+                    className: styles.status__icon,
                     innerText: status === 'Alive' ? '🟢' : '🔴',
                   }),
                   createElement('p', {
-                    className: 'status__text',
+                    className: styles.status__text,
                     innerText: `${status} - ${species}`,
                   }),
                 ],
@@ -43,28 +43,28 @@ export function createCharacterCard({
             ],
           }),
           createElement('section', {
-            className: 'character__location',
+            className: styles.character__location,
             childElements: [
               createElement('p', {
-                className: 'location__headline',
+                className: styles.location__headline,
                 innerText: 'Last known location:',
               }),
               createElement('p', {
-                className: 'location__actual',
+                className: styles.location__actual,
                 innerText: location,
               }),
             ],
           }),
           createElement('section', {
-            className: 'character__origin',
+            className: styles.character__origin,
             childElements: [
               createElement('p', {
-                className: 'origin__headline',
+                className: styles.origin__headline,
                 innerText: 'Origin:',
               }),
               createElement('p', {
                 innerText: origin,
-                className: `origin__actual`,
+                className: styles.origin__actual,
               }),
             ],
           }),
