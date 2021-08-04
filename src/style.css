@@ -6,7 +6,6 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #fff;
-  margin-top: 60px;
 }
 
 *,
@@ -22,6 +21,7 @@ body {
 }
 
 .headerDiv {
+  padding-top: 4rem;
   display: grid;
   grid-auto-flow: row;
   place-items: center;
