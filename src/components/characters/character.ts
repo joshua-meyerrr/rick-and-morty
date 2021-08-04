@@ -1,12 +1,12 @@
 import { createElement } from '../../utils/createElement';
 import './character.css';
 
-export function createCharacterCard() {
+export function createCharacterCard(character): HTMLElement {
   return createElement('article', {
     className: 'card',
     childElements: [
       createElement('img', {
-        src: 'https://rickandmortyapi.com/api/character/avatar/198.jpeg',
+        src: character.thumbnail,
         className: 'card__img',
       }),
       createElement('div', {
@@ -16,7 +16,7 @@ export function createCharacterCard() {
             className: 'card__character',
             childElements: [
               createElement('h2', {
-                innerText: 'Lady Katana',
+                innerText: character.name,
                 className: 'character__name',
               }),
               createElement('div', {
@@ -28,7 +28,7 @@ export function createCharacterCard() {
                   }),
                   createElement('p', {
                     className: 'status__text',
-                    innerText: `Dead - Humanoid`,
+                    innerText: `${character.status} - ${character.species}`,
                   }),
                 ],
               }),
@@ -42,8 +42,8 @@ export function createCharacterCard() {
                 innerText: 'Last known location:',
               }),
               createElement('p', {
-                innerText: 'Ricks home',
                 className: 'location__actual',
+                innerText: character.location,
               }),
             ],
           }),
@@ -55,8 +55,8 @@ export function createCharacterCard() {
                 innerText: 'First seen in:',
               }),
               createElement('p', {
-                innerText: 'Interdimensional Cabel',
-                className: 'seenIn__actual',
+                innerText: character.seenIn,
+                className: `location__actual`,
               }),
             ],
           }),

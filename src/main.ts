@@ -4,6 +4,15 @@ import { createElement } from './utils/createElement';
 
 const app = document.querySelector<HTMLDivElement>('#app');
 
+const character = {
+  name: 'Rick Sanchez',
+  thumbnail: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
+  status: 'Alive',
+  species: 'Human',
+  location: 'Earth (C-137)',
+  seenIn: 'First Episode',
+};
+
 const mainElement = createElement('main', {
   childElements: [
     createElement('div', {
@@ -35,12 +44,12 @@ const mainElement = createElement('main', {
     createElement('div', {
       className: 'characterContainer',
       childElements: [
-        createCharacterCard(),
-        createCharacterCard(),
-        createCharacterCard(),
-        createCharacterCard(),
-        createCharacterCard(),
-        createCharacterCard(),
+        createCharacterCard(character),
+        createCharacterCard(character),
+        createCharacterCard(character),
+        createCharacterCard(character),
+        createCharacterCard(character),
+        createCharacterCard(character),
       ],
     }),
   ],
