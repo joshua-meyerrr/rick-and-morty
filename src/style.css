@@ -18,7 +18,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #151f28;
+  background-color: #191d24;
 }
 
 .headerDiv {
@@ -41,7 +41,7 @@ body {
 .header__search {
   font-size: 3rem;
   color: white;
-  background-color: #1c2a36;
+  background-color: #212730;
   border: none;
   border-radius: 10px;
   padding: 1rem 1.5rem;
