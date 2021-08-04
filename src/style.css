@@ -18,7 +18,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #2c3e50;
+  background-color: #151f28;
 }
 
 .headerDiv {
@@ -35,10 +35,24 @@ body {
   color: #00acc7;
   text-shadow: 4px 4px #84c778;
   letter-spacing: 0.2rem;
+  margin: 3rem;
 }
 
 .header__search {
-  font-size: 1.5rem;
+  font-size: 3rem;
+  color: white;
+  background-color: #1c2a36;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+}
+
+.header__search:focus {
+  outline: none;
+}
+
+.header__search::placeholder {
+  color: rgba(255, 255, 255, 0.459);
 }
 
 .img--left {
@@ -49,4 +63,12 @@ body {
 .img--right {
   width: 300px;
   padding-right: 3rem;
+}
+
+.characterContainer {
+  padding: 5rem 3rem;
+  grid-gap: 2rem;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 }

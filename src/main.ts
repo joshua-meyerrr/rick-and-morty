@@ -34,7 +34,14 @@ const mainElement = createElement('main', {
     }),
     createElement('div', {
       className: 'characterContainer',
-      childElements: [createCharacterCard()],
+      childElements: [
+        createCharacterCard(),
+        createCharacterCard(),
+        createCharacterCard(),
+        createCharacterCard(),
+        createCharacterCard(),
+        createCharacterCard(),
+      ],
     }),
   ],
 });
