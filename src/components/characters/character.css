@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+.card {
+  height: 30em;
+  width: 20em;
+  background-color: #233543;
+  border-radius: 20px;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  place-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  filter: drop-shadow(0 0.25rem 0.2rem rgba(0, 0, 0, 0.2));
+  transition: transform 0.2s ease-in;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card * {
+  margin: 0;
+}
+
+.card__img {
+  height: 200px;
+  border-radius: 50%;
+}
+
+.card__content {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  align-content: space-around;
+}
+
+.character__name {
+  font-size: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.character__status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.character__status * {
+  padding: 0 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.character__location,
+.character__seenIn {
+  padding: 0.5rem;
+  background-color: #1c2a36;
+  border-radius: 10px;
+}
+
+.seenIn__headline,
+.location__headline {
+  padding-bottom: 0.3rem;
+}
+
+.seenIn__actual,
+.location__actual {
+  color: #84c778;
+  font-weight: bold;
+}
