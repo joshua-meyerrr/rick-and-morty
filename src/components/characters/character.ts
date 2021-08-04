@@ -1,12 +1,19 @@
 import { createElement } from '../../utils/createElement';
 import './character.css';
 
-export function createCharacterCard(character): HTMLElement {
+export function createCharacterCard({
+  thumbnail,
+  name,
+  status,
+  species,
+  location,
+  origin,
+}): HTMLElement {
   return createElement('article', {
     className: 'card',
     childElements: [
       createElement('img', {
-        src: character.thumbnail,
+        src: thumbnail,
         className: 'card__img',
       }),
       createElement('div', {
@@ -16,7 +23,7 @@ export function createCharacterCard(character): HTMLElement {
             className: 'card__character',
             childElements: [
               createElement('h2', {
-                innerText: character.name,
+                innerText: name,
                 className: 'character__name',
               }),
               createElement('div', {
@@ -24,11 +31,11 @@ export function createCharacterCard(character): HTMLElement {
                 childElements: [
                   createElement('span', {
                     className: 'status__icon',
-                    innerText: '💀',
+                    innerText: status === 'Alive' ? '🟢' : '🔴',
                   }),
                   createElement('p', {
                     className: 'status__text',
-                    innerText: `${character.status} - ${character.species}`,
+                    innerText: `${status} - ${species}`,
                   }),
                 ],
               }),
@@ -43,20 +50,20 @@ export function createCharacterCard(character): HTMLElement {
               }),
               createElement('p', {
                 className: 'location__actual',
-                innerText: character.location,
+                innerText: location,
               }),
             ],
           }),
           createElement('section', {
-            className: 'character__seenIn',
+            className: 'character__origin',
             childElements: [
               createElement('p', {
-                className: 'seenIn__headline',
-                innerText: 'First seen in:',
+                className: 'origin__headline',
+                innerText: 'Origin:',
               }),
               createElement('p', {
-                innerText: character.seenIn,
-                className: `location__actual`,
+                innerText: origin,
+                className: `origin__actual`,
               }),
             ],
           }),

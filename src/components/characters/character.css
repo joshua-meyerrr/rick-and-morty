@@ -50,19 +50,23 @@
   margin-bottom: 0.5rem;
 }
 
+.status__text {
+  padding-top: 0.28rem;
+}
+
 .character__location,
-.character__seenIn {
+.character__origin {
   padding: 0.5rem;
   background-color: #212730;
   border-radius: 10px;
 }
 
-.seenIn__headline,
+.origin__headline,
 .location__headline {
   padding-bottom: 0.3rem;
 }
 
-.seenIn__actual,
+.origin__actual,
 .location__actual {
   color: #84c778;
   font-weight: bold;

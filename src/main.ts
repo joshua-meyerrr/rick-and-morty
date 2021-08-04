@@ -10,7 +10,7 @@ const character = {
   status: 'Alive',
   species: 'Human',
   location: 'Earth (C-137)',
-  seenIn: 'First Episode',
+  origin: 'Earth (Replacement Dimension)',
 };
 
 const mainElement = createElement('main', {
