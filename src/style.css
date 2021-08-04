@@ -72,3 +72,29 @@ body {
   place-items: center;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 }
+
+@media screen and (max-width: 1000px) {
+  .img--left,
+  .img--right {
+    display: none;
+  }
+  .headerDiv {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header__heading {
+    font-size: 5rem;
+    margin: 2rem auto;
+  }
+
+  .header__search {
+    font-size: 1.1rem;
+  }
+
+  .characterContainer {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding: 2rem 1rem;
+  }
+}
