@@ -34,8 +34,6 @@ export type AllCharactersFromApi = {
     pages: number;
     next: string | null;
     prev: string | null;
-    // next null at last item, prev null on first item
-    //    how to fix?
   };
   results: CharacterFromApi[];
 };
