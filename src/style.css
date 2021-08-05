@@ -81,6 +81,13 @@ body {
   .headerDiv {
     grid-template-columns: 1fr;
   }
+
+  .characterContainer {
+    padding: 5rem 3rem;
+    grid-gap: 2rem;
+    display: grid;
+    place-items: center;
+  }
 }
 
 @media screen and (max-width: 500px) {
