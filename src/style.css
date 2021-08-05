@@ -1,8 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #fff;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #191d24;
+}
+
+.headerDiv {
+  padding-top: 4rem;
+  display: grid;
+  grid-auto-flow: row;
+  place-items: center;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 2rem;
+}
+
+.header__heading {
+  font-size: 7rem;
+  font-family: 'Creepster', cursive;
+  color: #00acc7;
+  text-shadow: 4px 4px #84c778;
+  letter-spacing: 0.2rem;
+  margin: 3rem;
+}
+
+.header__search {
+  font-size: 2rem;
+  color: white;
+  background-color: #212730;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+}
+
+.header__search:focus {
+  outline: none;
+}
+
+.header__search::placeholder {
+  color: rgba(255, 255, 255, 0.459);
+}
+
+.img--left {
+  width: 300px;
+  padding-left: 3rem;
+}
+
+.img--right {
+  width: 300px;
+  padding-right: 3rem;
+}
+
+.characterContainer {
+  padding: 5rem 3rem;
+  grid-gap: 2rem;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+@media screen and (max-width: 1000px) {
+  .img--left,
+  .img--right {
+    display: none;
+  }
+  .headerDiv {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header__heading {
+    font-size: 5rem;
+    margin: 2rem auto;
+  }
+
+  .header__search {
+    font-size: 1.1rem;
+  }
+
+  .characterContainer {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding: 2rem 1rem;
+  }
 }

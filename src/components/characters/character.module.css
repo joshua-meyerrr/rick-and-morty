@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+.card {
+  height: 30em;
+  background-color: #2a313c;
+  border-radius: 20px;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  place-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  filter: drop-shadow(0 0.25rem 0.2rem rgba(0, 0, 0, 0.2));
+  transition: transform 0.2s ease-in;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card * {
+  margin: 0;
+}
+
+.image {
+  height: 200px;
+  border-radius: 50%;
+}
+
+.content {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  align-content: space-around;
+}
+
+.character__name {
+  font-size: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.character__status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.character__status * {
+  padding: 0 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.status__text {
+  padding-top: 0.28rem;
+}
+
+.character__location,
+.character__origin {
+  padding: 0.5rem;
+  background-color: #212730;
+  border-radius: 10px;
+}
+
+.origin__headline,
+.location__headline {
+  padding-bottom: 0.3rem;
+}
+
+.origin__actual,
+.location__actual {
+  color: #84c778;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 500px) {
+  .card {
+    padding: 1rem;
+    height: 27em;
+  }
+  .image {
+    height: 170px;
+  }
+  .character__name {
+    font-size: 1.5rem;
+  }
+}
